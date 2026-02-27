@@ -1,41 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ca">
 
 <head>
-    <meta charset="UTF-8">
-    <title>La meva web personal</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-
-        h1 {
-            color: #2c3e50;
-        }
-
-        .math-box {
-            background: #f4f4f4;
-            padding: 15px;
-            border-left: 5px solid #3498db;
-        }
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Títol meme — Pàgina psicodèlica</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <h1>Aquesta és la web de l'Àjan</h1>
-    <p>Em dic Àjan i soc estudiant de Matemàtica Computacional i Analítica de Dades a la UAB.</p>
-    <p>M'agrada el futbol, les butxs i el color groc.</p>
-    <p>No se res de pàgines web i doncs aquest és el meu projecte per intentar aprendre'n una mica:)</p>
+    <header class="site-header">
+        <h1 class="site-title">Aquesta és la pàgina web de l'Àjan</h1>
+    </header>
 
-    <a href="https://github.com/themossen69" target="_blank">Aquest és el meu GitHub</a>
+    <main class="container" role="main">
+        <!-- Canvia aquí els 3 paràgrafs i l'enllaç -->
+        <section class="card">
+            <p class="meme-paragraph">Em dic Àjan i soc estudiant de Matemàtica Computacional i Analítica de Dades a la
+                UAB. </p>
+            <p class="meme-paragraph">M'agrada el futbol, les butxs i el color groc.</p>
+            <p class="meme-paragraph">No se res de pàgines web i doncs aquest és el meu projecte per intentar aprendre'n
+                una mica:)</p>
 
-    <div class="math-box">
-        <p>Prova de concepte: L'equació d'Euler és $e^{i\pi} + 1 = 0$</p>
-    </div>
+            <a class="meme-link" href="https://github.com/themossen69" target="_blank" rel="noopener noreferrer">
+                El meu Github →
+            </a>
+        </section>
+    </main>
+
+    <footer class="site-footer" aria-hidden="true">
+        <small>✨ Estètica: groc + Comic Sans + psicodèlia moderna</small>
+    </footer>
+
+    <script>
+        // Petita interacció: clica el títol per activar/desactivar l'efecte "extra trippy"
+        (function () {
+            const title = document.querySelector('.site-title');
+            title.addEventListener('click', () => {
+                document.body.classList.toggle('trippy');
+            });
+        })();
+    </script>
 </body>
 
 </html>
