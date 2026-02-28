@@ -19,28 +19,35 @@
     </header>
 
     <main class="container" role="main">
-        <section class="card">
-            <h2 class="card-title">En Grabiel ens deixa</h2>
-            <p class="meme-paragraph">
-                Dia trist pels fans dels arbres fruiters a Dosrius.
-                En Grabiel, un dels 4 nesprers plantats la primavera passada, ens deixa després d'una llarga lluita
-                contra la seva pròpia sequera.
-            </p>
-            <p class="meme-paragraph">
-                En Grabiel va ser un arbre valent i fort, que va resistir les adversitats del clima i les
-                inclemències del temps durant mesos. Tot i els esforços de regar-lo i cuidar-lo, en Grabiel no va
-                poder superar la seva condició de nespra seca.
-            </p>
-            <p class="meme-paragraph">
-                Ara que s'apropa de nou la primavera, els arbres fruiters de Dosrius renaixeran amb mes força que mai
-                amb el record del nesprer més lluitador.
-            </p>
-            <p class="meme-paragraph">
-                Sempre et recordarem, ACS🕊️❤️‍🩹
-            </p>
+        <section class="news-section">
+            <div class="news-item">
+                <button class="news-title"> En Grabiel ens deixa - 28/02/2026</button>
+                <div class="news-content">
+                    <p class="meme-paragraph">
+                        Dia trist pels fans dels arbres fruiters a Dosrius.
+                        En Grabiel, un dels 4 nesprers plantats la primavera passada, ens deixa després d'una llarga
+                        lluita
+                        contra la seva pròpia sequera.
+                    </p>
+                    <p class="meme-paragraph">
+                        En Grabiel va ser un arbre valent i fort, que va resistir les adversitats del clima i les
+                        inclemències del temps durant mesos. Tot i els esforços de regar-lo i cuidar-lo, en Grabiel no
+                        va
+                        poder superar la seva condició de nespra seca.
+                    </p>
+                    <p class="meme-paragraph">
+                        Ara que s'apropa de nou la primavera, els arbres fruiters de Dosrius renaixeran amb mes força
+                        que mai
+                        amb el record del nesprer més lluitador.
+                    </p>
+                    <p class="meme-paragraph">
+                        Sempre et recordarem, ACS🕊️❤️‍🩹
+                    </p>
 
-            <div class="meme-images">
-                <img src="imatges/grabiel.jpeg" alt="Foto d'en Grabiel, el nesprer que ens deixa" />
+                    <div class="meme-images">
+                        <img src="./imatges/grabiel.jpeg" alt="Foto d'en Grabiel, el nesprer que ens deixa" />
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -50,13 +57,15 @@
     </footer>
 
     <script>
-        // Petita interacció: clica el títol per activar/desactivar l'efecte "extra trippy"
-        (function () {
-            const title = document.querySelector('.site-title');
+        const newsItems = document.querySelectorAll('.news-item');
+
+        newsItems.forEach(item => {
+            const title = item.querySelector('.news-title');
             title.addEventListener('click', () => {
-                document.body.classList.toggle('trippy');
+                // Alterna la classe activa
+                item.classList.toggle('active');
             });
-        })();
+        });
     </script>
 </body>
 

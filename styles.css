@@ -268,3 +268,60 @@ body.trippy::before {
     transform: scale(1.03) rotate(-1deg);
     filter: saturate(1.2) contrast(1.1);
 }
+
+/* Container i estil */
+.news-section {
+    margin-top: 40px;
+}
+
+.news-item {
+    margin-bottom: 20px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(133, 5, 5, 0.05), rgba(0, 0, 124, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Títol de la notícia */
+.news-title {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+    background: linear-gradient(90deg, rgba(133, 5, 5, 0.71), rgba(0, 0, 124, 0.559));
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    font-size: clamp(18px, 2.5vw, 22px);
+    font-weight: 700;
+    text-align: center;
+    color: #111;
+    border-radius: 0;
+    transition: background 0.25s ease;
+}
+
+.news-title:hover {
+    background: linear-gradient(90deg, rgba(0, 0, 124, 0.559), rgba(133, 5, 5, 0.71));
+}
+
+/* Contingut amagat */
+.news-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    padding: 0 20px;
+    color: #111;
+    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: 1.4;
+    /* overflow-y: auto; */
+}
+
+/* Quan estigui actiu */
+.news-item.active .news-content {
+    max-height: none;
+    overflow: visible;
+    padding: 12px 20px;
+    transition: none;
+    /* ja no animem max-height */
+}
