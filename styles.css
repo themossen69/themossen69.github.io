@@ -108,7 +108,7 @@ body.trippy::before {
     display: inline-block;
     padding: 6px 18px;
     border-radius: 999px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.03));
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.2));
     transition: transform .25s ease, filter .25s ease;
 }
 
@@ -283,12 +283,21 @@ body.trippy::before {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
+.news-item:active {
+    transform: scale(.98) rotate(-1deg);
+}
+
+.news-item:not(.active):hover {
+    transform: scale(1.05) rotate(-1deg);
+    filter: saturate(1.2);
+}
+
 /* Títol de la notícia */
 .news-title {
     display: block;
     width: 100%;
     padding: 16px 20px;
-    background: linear-gradient(90deg, rgba(133, 5, 5, 0.71), rgba(0, 0, 124, 0.559));
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.2));
     border: none;
     outline: none;
     cursor: pointer;
@@ -298,11 +307,7 @@ body.trippy::before {
     text-align: center;
     color: #111;
     border-radius: 0;
-    transition: background 0.25s ease;
-}
-
-.news-title:hover {
-    background: linear-gradient(90deg, rgba(0, 0, 124, 0.559), rgba(133, 5, 5, 0.71));
+    transition: transform .25s ease, filter .25s ease;
 }
 
 /* Contingut amagat */
