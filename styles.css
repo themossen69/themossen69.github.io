@@ -126,7 +126,7 @@ body.trippy::before {
     bottom: 10px;
     left: 0;
     white-space: nowrap;
-    animation: slideFull 8s linear infinite;
+    animation: slideFull 10s linear infinite;
 }
 
 @keyframes slideFull {
@@ -166,6 +166,7 @@ body.trippy::before {
         colorShift 8s linear infinite;
 
     transform-origin: center;
+    text-align: center;
 }
 
 /* Slight phase offset for each paragraph to make motion feel organic */
@@ -270,15 +271,17 @@ body.trippy::before {
 
 /* Contenidor d'imatges */
 .meme-images {
-    margin-top: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     display: grid;
     gap: 20px;
 }
 
 /* Imatges adaptatives */
 .meme-images img {
-    width: 100%;
+    width: 70%;
     height: auto;
+    justify-self: center;
     border-radius: 16px;
     object-fit: cover;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
