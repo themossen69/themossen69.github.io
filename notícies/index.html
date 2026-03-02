@@ -55,6 +55,17 @@ layout: null
                 item.classList.toggle('active');
             });
         });
+
+        // imatges news-content
+        document.querySelectorAll('.news-content').forEach(post => {
+            const imgs = post.querySelectorAll('img');
+            if (imgs.length > 0) {
+                const container = document.createElement('div');
+                container.className = 'meme-images';
+                imgs.forEach(img => container.appendChild(img));
+                post.prepend(container); // Les imatges entren al principi
+            }
+        });
     </script>
 </body>
 

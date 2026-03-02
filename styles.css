@@ -282,7 +282,7 @@ body.trippy::before {
     border-radius: 16px;
     object-fit: cover;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, filter 0.3s ease;
+    animation: spin 1s linear infinite;
 }
 
 /* Efecte hover meme */
@@ -362,19 +362,4 @@ body.trippy::before {
     padding: 12px 20px;
     transition: none;
     /* ja no animem max-height */
-}
-
-.news-content img {
-    width: 70%;
-    height: auto;
-    justify-self: center;
-    border-radius: 16px;
-    object-fit: cover;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.news-content img:hover {
-    filter: saturate(1.2) contrast(1.1);
-    animation: spin 1s linear infinite;
 }
