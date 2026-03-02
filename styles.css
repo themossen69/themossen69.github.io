@@ -340,6 +340,8 @@ body.trippy::before {
     color: #111;
     border-radius: 0;
     transition: transform .25s ease, filter .25s ease;
+    white-space: normal;
+    word-break: break-word;
 }
 
 /* Contingut amagat */
