@@ -68,9 +68,6 @@ body.trippy::before {
     position: relative;
     z-index: 1;
     min-height: calc(100vh - 140px);
-    display: flex;
-    align-items: normal;
-    justify-content: center;
     padding: 36px;
 }
 
@@ -296,7 +293,8 @@ body.trippy::before {
 
 /* Container i estil */
 .news-section {
-    margin-top: 40px;
+    width: min(900px, 100%);
+    margin: 0 auto;
 }
 
 .news-item {
@@ -308,6 +306,7 @@ body.trippy::before {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
     transform-origin: center;
     will-change: transform;
+    width: 100%;
 }
 
 .news-item:not(.active):hover {
