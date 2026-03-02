@@ -268,9 +268,8 @@ body.trippy::before {
 
 /* Contenidor d'imatges */
 .meme-images {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    justify-self: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
     display: grid;
     gap: 20px;
 }
