@@ -282,12 +282,11 @@ body.trippy::before {
     border-radius: 16px;
     object-fit: cover;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    animation: spin 1s linear infinite;
 }
 
 /* Efecte hover meme */
 .meme-images img:hover {
-    transform: scale(1.03) rotate(-1deg);
+    animation: spin 1s linear infinite;
     filter: saturate(1.2) contrast(1.1);
 }
 
