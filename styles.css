@@ -288,7 +288,7 @@ body.trippy::before {
 
 /* Efecte hover meme */
 .meme-images img:hover {
-    transform: rotate(10deg);
+    transform: rotate(360deg);
     filter: saturate(1.2) contrast(1.1);
 }
 
