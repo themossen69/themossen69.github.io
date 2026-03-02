@@ -1,7 +1,3 @@
----
-layout: null
----
-
 <!doctype html>
 <html lang="ca">
 
@@ -25,19 +21,45 @@ layout: null
     <main class="container" role="main">
         <section class="news-section">
 
-            {% assign posts = site.posts | sort: "date" | reverse %}
+            
 
-            {% for post in posts %}
+            
             <div class="news-item">
                 <button class="news-title">
-                    {{ post.title }} - {{ post.date | date: "%d/%m/%Y" }}
+                    segona notícia - 02/03/2026
                 </button>
 
                 <div class="news-content">
-                    {{ post.content }}
+                    <p>Aquest és el contingut de la meva notícia escrit en <strong>Markdown</strong>.</p>
+
+<ul>
+  <li>Punt 1</li>
+  <li>Punt 2</li>
+  <li>Punt 3</li>
+</ul>
+
                 </div>
             </div>
-            {% endfor %}
+            
+            <div class="news-item">
+                <button class="news-title">
+                    En Grabiel ens deixa - 28/02/2026
+                </button>
+
+                <div class="news-content">
+                    <p>Dia trist pels fans dels arbres fruiters a Dosrius.</p>
+
+<p>En Grabiel, un dels 4 nesprers plantats la primavera passada, ens deixa després d’una llarga lluita contra la seva pròpia sequera.</p>
+
+<p>En Grabiel va ser un arbre valent i fort…</p>
+
+<p>Sempre et recordarem, ACS🕊️❤️‍🩹</p>
+
+<p><img src="/assets/images/grabiel.jpeg" alt="Foto d'en Grabiel" /></p>
+
+                </div>
+            </div>
+            
 
         </section>
     </main>
