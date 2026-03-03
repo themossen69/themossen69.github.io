@@ -69,6 +69,11 @@ body.trippy::before {
     z-index: 1;
     min-height: calc(100vh - 140px);
     padding: 36px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    box-sizing: border-box;
 }
 
 /* Card that holds paragraphs */
