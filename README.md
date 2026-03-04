@@ -1,7 +1,10 @@
-# Aquesta és la pàgina web de l'Àjan
+# README
 
-Em dic Àjan i soc estudiant de Matemàtica Computacional i Analítica de Dades a la UAB. 
+Pàgina personal d'Àjan Perarnau Pagès aka themossen69. Projecte creat amb l'objectiu d'aprendre de pàgines web.
 
-M'agrada el futbol, les butxs i el color groc.
+## Accés
 
-No se res de pàgines web i doncs aquest és el meu projecte per intentar aprendre'n una mica:)
+Accedeix a la web amb l'enllaç [ajan.perarnau.cat](https://ajan.perarnau.cat/)
+
+## Notícies
+L'apartat de notícies és com un blog fet de manera que creant un fitxer markdown a la carpeta `_posts` aquesta notícia es penja automaticament a la web formatejada amb la plantilla de `./notícies/index.html`.
