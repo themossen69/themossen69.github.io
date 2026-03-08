@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ca">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>themossen69 - objectius</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <h1 class="site-title">xX_objectius de l'any_Xx</h1>
+    </header>
+
+    <p class="meme-paragraph">
+        Aquí teniu els objectius que m'he proposat per aquest 2026 juntament amb el seu progrés actual:
+    </p>
+
+    <div class="circle-container">
+        <div class="circle-item">
+            <div class="circle-title">flexions gymbro 24/7</div>
+            <div class="circle-content">
+                <p>Objectiu: Fer el màxim de flexions seguides cada dia.</p>
+                <p>Progrés actual: </p>
+                <div class="graf-container">
+                    <iframe width="482" height="298" seamless frameborder="0" scrolling="no"
+                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTQi3Zh0BsCxQZvuIVGpJFbFLfPkwnoCUfgmk4Cz0xqUIjOI9H5gIbCIUY2deqFmfrXYDRiKN8RwN3P/pubchart?oid=1588898503&amp;format=interactive"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="overlay"></div>
+    <script>
+        const circles = document.querySelectorAll('.circle-item');
+        const overlay = document.getElementById('overlay');
+
+        circles.forEach(circle => {
+            circle.addEventListener('click', () => {
+                circle.classList.add('expanded', 'active');
+                overlay.classList.add('active');
+            });
+        });
+
+        // Tancar quan cliques al fons
+        overlay.addEventListener('click', () => {
+            const expanded = document.querySelector('.circle-item.expanded');
+            if (expanded) {
+                expanded.classList.remove('expanded', 'active');
+            }
+            overlay.classList.remove('active');
+        });
+    </script>
+
+    <footer class="site-footer" aria-hidden="true">
+        <small>made in dosrius</small>
+    </footer>
+
+</body>
+
+</html>
