@@ -396,17 +396,21 @@ body.trippy::before {
     text-align: center; */
 }
 
+.news-content img {
+    animation: none;
+}
+
 .graf-container {
     position: relative;
     width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
+    height: 100%;
+    margin: 0;
 }
 
 .iframe {
     width: 100%;
+    height: 100%;
     border: none;
-    min-height: 400px;
 }
 
 .circle-container {
@@ -431,6 +435,7 @@ body.trippy::before {
     position: relative;
     text-align: center;
     transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease, left 0.5s ease, top 0.5s ease;
+    overflow: hidden;
     z-index: 2;
 }
 
@@ -449,18 +454,24 @@ body.trippy::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
-    height: 90%;
-    overflow: auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
     opacity: 0;
     transition: opacity 0.3s ease;
-    text-align: center;
     pointer-events: none;
 }
 
 .circle-item.active .circle-content {
     opacity: 1;
     pointer-events: auto;
+    width: 100%;
+    height: 100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; */
+    box-sizing: border-box;
 }
 
 /* Overlay fons difuminat */
