@@ -388,6 +388,7 @@ body.trippy::before {
         -4px -4px 0 rgba(0, 210, 255, 0.2),
         0 8px 22px rgba(0, 0, 0, 0.15);
 
+    animation: floaty 6s ease-in-out infinite;
     /* transform-origin: center;
     text-align: center; */
 }
