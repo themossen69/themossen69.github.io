@@ -1,18 +1,17 @@
-/* styles.css
-   Estètica: meme, fons groc, Comic Sans, psicodèlic i modern.
-*/
-
-/* Fonts: prioritzem Comic Sans MS (disponible en molts sistemes) */
 :root {
-    --bg-yellow: #ffef41;
-    --light-yellow: #fff050;
-    --card-bg: rgba(255, 255, 255, 0.06);
-    --text-shadow-1: 0 2px 0 rgba(0, 0, 0, 0.15);
-    --glass-border: rgba(255, 255, 255, 0.25);
-}
+    --bg-yellow: #fcf434;
+    /* --bg-yellow: #ffef41; */
+    --light-yellow: #fff374;
+    --black: #000000;
+    --lila: #9C59D1;
 
-* {
-    box-sizing: border-box;
+    --lesbian-palette1: #d52d00;
+    --lesbian-palette2: #ef7627;
+    --lesbian-palette3: #ff9a56;
+    --lesbian-palette4: #ffffff;
+    --lesbian-palette5: #d162A4;
+    --lesbian-palette6: #b55690;
+    --lesbian-palette7: #a30262;
 }
 
 html,
@@ -26,449 +25,59 @@ body {
     overflow-x: hidden;
 }
 
-/* Layout */
-.container {
-    position: relative;
-    z-index: 1;
-    min-height: calc(100vh - 140px);
-    padding: 36px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    box-sizing: border-box;
-}
-
-/* Card that holds paragraphs */
-.card {
-    width: 100%;
-    margin: 0 auto;
-    padding: clamp(20px, 3.5vw, 48px);
-    border-radius: 20px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(6px) saturate(1.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-    text-align: center;
-}
-
-/* Títol superior */
-.site-header {
+header {
     position: relative;
     z-index: 1;
     text-align: center;
-    padding: 26px 16px 8px 16px;
+    padding: 25pt 15pt 15pt 15pt;
 }
 
-.site-title {
-    margin: 0;
-    font-size: clamp(24px, 5vw, 56px);
-    letter-spacing: 2px;
-    text-transform: none;
-    text-decoration: none;
-    color: #111;
-    text-shadow:
-        0 2px 0 rgba(255, 255, 255, 0.15),
-        2px 6px 16px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
+h1 {
     display: inline-block;
-    padding: 6px 18px;
-    border-radius: 999px;
-    box-shadow: #00000036 0px 4px 12px;
+    text-align: center;
     background: linear-gradient(90deg, var(--light-yellow), var(--bg-yellow), var(--light-yellow));
-    transition: transform .25s ease, filter .25s ease;
-}
-
-.site-title:active {
-    transform: scale(.98) rotate(-1deg);
-}
-
-.site-title:hover {
-    transform: scale(1.05) rotate(-1deg);
-}
-
-.site-footer {
-    position: relative;
-    bottom: 10px;
-    left: 0;
-    white-space: nowrap;
-    animation: slideFull 10s linear infinite;
-}
-
-@keyframes slideFull {
-    0% {
-        transform: translateX(100%);
-    }
-
-    50% {
-        transform: translateX(calc(100vw - 100%));
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-/* Paragraphs style — loud, fun, animated */
-.meme-paragraph {
-    margin: 18px 0;
-    font-size: clamp(18px, 2.6vw, 24px);
-    line-height: 1.3;
-    color: #111;
-    max-width: 80ch;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 12px 18px;
-    border-radius: 12px;
-
-    /* Estètica psicodèlica permanent */
-    text-shadow:
-        4px 4px 0 rgba(255, 60, 172, 0.25),
-        -4px -4px 0 rgba(0, 210, 255, 0.2),
-        0 8px 22px rgba(0, 0, 0, 0.15);
-
-    animation:
-        floaty 6s ease-in-out infinite,
-        colorShift 8s linear infinite;
-
-    transform-origin: center;
-    text-align: center;
-}
-
-/* Slight phase offset for each paragraph to make motion feel organic */
-.meme-paragraph:nth-of-type(1) {
-    animation-delay: 0s;
-}
-
-.meme-paragraph:nth-of-type(2) {
-    animation-delay: 0.6s;
-}
-
-.meme-paragraph:nth-of-type(3) {
-    animation-delay: 1.2s;
-}
-
-@keyframes floaty {
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
-
-    25% {
-        transform: translateY(-6px) rotate(-0.6deg);
-    }
-
-    50% {
-        transform: translateY(2px) rotate(0.4deg);
-    }
-
-    75% {
-        transform: translateY(-3px) rotate(-0.2deg);
-    }
-
-    100% {
-        transform: translateY(0) rotate(0deg);
-    }
-}
-
-/* Link styled as psychedelic button */
-.meme-link {
-    display: inline-block;
-    margin-top: 18px;
-    padding: 14px 22px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 16px;
-    color: #111;
-    background: linear-gradient(90deg, var(--light-purple), var(--bg-purple), var(--light-purple));
-    border: 2px solid rgba(0, 0, 0, 0.08);
-    box-shadow:
-        0 6px 18px rgba(0, 0, 0, 0.12),
-        0 0 18px rgba(255, 60, 172, 0.08);
-    transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
-    backdrop-filter: blur(4px);
-}
-
-.meme-link:hover {
-    transform: translateY(-4px) scale(1.01);
-    box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.18),
-        0 0 36px rgba(255, 60, 172, 0.18);
-    filter: saturate(1.1);
-}
-
-/* Accessibility & small screens adjustments */
-@media (max-width:600px) {
-    .card {
-        padding: 18px;
-        border-radius: 14px;
-    }
-
-    .site-title {
-        font-size: 28px;
-    }
-
-    .meme-paragraph {
-        font-size: 16px;
-    }
-}
-
-@keyframes colorShift {
-    0% {
-        filter: hue-rotate(0deg);
-    }
-
-    25% {
-        filter: hue-rotate(40deg);
-    }
-
-    50% {
-        filter: hue-rotate(80deg);
-    }
-
-    75% {
-        filter: hue-rotate(120deg);
-    }
-
-    100% {
-        filter: hue-rotate(0deg);
-    }
-}
-
-/* Contenidor d'imatges */
-.meme-images {
-    margin-top: 70px;
-    margin-bottom: 70px;
-    display: grid;
-    gap: 20px;
-}
-
-/* Imatges adaptatives */
-.meme-images img {
-    width: 60%;
-    height: auto;
-    justify-self: center;
-    border-radius: 16px;
-    object-fit: cover;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    transition: transform 0.5s ease, filter 0.5s ease;
-    /* transició suau */
-}
-
-/* Efecte hover meme */
-.meme-images img:hover {
-    transform: rotate(360deg);
-    filter: saturate(1.2) contrast(1.1);
-}
-
-/* Container i estil */
-.news-section {
-    width: min(900px, 100%);
-    margin: 0 auto;
-}
-
-.news-item {
-    margin-bottom: 20px;
-    border-radius: 14px;
-    overflow: hidden;
-    background: linear-gradient(180deg, rgba(133, 5, 5, 0.05), rgba(0, 0, 124, 0.02));
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-    transform-origin: center;
-    will-change: transform;
-    width: 100%;
-}
-
-.news-item:not(.active):hover {
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* Títol de la notícia */
-.news-title {
-    display: block;
-    width: 100%;
-    padding: 16px 20px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.2));
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font: inherit;
-    font-size: clamp(18px, 2.5vw, 22px);
-    font-weight: 700;
-    text-align: center;
-    color: #111;
-    border-radius: 0;
-    transition: transform .25s ease, filter .25s ease;
-    white-space: normal;
-    word-break: break-word;
-}
-
-/* Contingut amagat */
-.news-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease, padding 0.35s ease;
-    padding: 0 20px;
-    color: #111;
-    font-size: clamp(16px, 2.2vw, 20px);
-    line-height: 1.4;
-    /* overflow-y: auto; */
-}
-
-/* Quan estigui actiu */
-.news-item.active .news-content {
-    max-height: none;
-    overflow: visible;
-    padding: 12px 20px;
-    transition: none;
-    /* ja no animem max-height */
-}
-
-.news-content p {
-    margin: 18px 0;
-    font-size: clamp(18px, 2.6vw, 24px);
-    line-height: 1.3;
-    color: #111;
-    max-width: 80ch;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 12px 18px;
-    border-radius: 12px;
-
-    /* Estètica psicodèlica permanent */
-    text-shadow:
-        4px 4px 0 rgba(255, 60, 172, 0.25),
-        -4px -4px 0 rgba(0, 210, 255, 0.2),
-        0 8px 22px rgba(0, 0, 0, 0.15);
-
-    animation: floaty 6s ease-in-out infinite;
-    /* transform-origin: center;
-    text-align: center; */
-}
-
-.news-content img {
-    animation: none;
-}
-
-.graf-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    padding: 5pt 10pt 5pt 10pt;
     margin: 0;
+    border-radius: 999px;
+    text-decoration: none;
+    text-transform: none;
+    cursor: pointer;
+    color: var(--black);
+    /* box-shadow: 0 0 10px 1px var(--black); */
+    animation: breathe 5s ease-in-out infinite;
 }
 
-.iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
+h1:active {
+    animation: none;
+    transform: scale(0.95) rotate(1deg);
 }
 
-.circle-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px;
-    padding: 0 20px 40px 20px;
-    position: relative;
-    align-items: center;
+h1:hover {
+    animation: none;
+    text-transform: full-width;
+    transform: scale(1.2) rotate(1deg);
+    /* background:
+        linear-gradient(rgb(255 255 255 / 0.4), rgb(255 255 255 / 0.4)),
+        linear-gradient(180deg,
+            var(--lesbian-palette1) 0%, var(--lesbian-palette1) 14.285%,
+            var(--lesbian-palette2) 14.285%, var(--lesbian-palette2) 28.57%,
+            var(--lesbian-palette3) 28.57%, var(--lesbian-palette3) 42.855%,
+            var(--lesbian-palette4) 42.855%, var(--lesbian-palette4) 57.14%,
+            var(--lesbian-palette5) 57.14%, var(--lesbian-palette5) 71.425%,
+            var(--lesbian-palette6) 71.425%, var(--lesbian-palette6) 85.71%,
+            var(--lesbian-palette7) 85.71%, var(--lesbian-palette7) 100%); */
 }
 
-.circle-item {
-    width: 120px;
-    height: 120px;
-    /*forma de cercle */
-    border-radius: 50%;
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+    }
 
-    background: var(--light-yellow);
-    transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease, left 0.5s ease, top 0.5s ease;
-    overflow: hidden;
-    box-shadow: #11111137 0px 4px 12px;
-    z-index: 999;
-}
+    50% {
+        transform: scale(1.08);
+    }
 
-.circle-title {
-    font-weight: 700;
-    font-size: 16px;
-    padding: 8px;
-    line-height: 1.2;
-    color: #111;
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-
-    display: flex;
-    justify-content: center;
-    /* horitzontal */
-    align-items: center;
-    /* vertical */
-}
-
-/* Contingut dins del cercle */
-.circle-content {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    opacity: 0;
-    pointer-events: none;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.circle-item.active .circle-content {
-    opacity: 1;
-    pointer-events: none;
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-
-}
-
-.circle-item.active .circle-title {
-    align-self: flex-start;
-    opacity: 0;
-}
-
-/* Overlay fons difuminat */
-#overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s ease;
-}
-
-#overlay.active {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-/* Cercle ampliat */
-.circle-item.expanded {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 400px;
-    z-index: 999;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    100% {
+        transform: scale(1);
+    }
 }
