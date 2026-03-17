@@ -19,31 +19,30 @@ layout: null
 
 <body>
     <header class="site-header">
-        <h1 class="site-title">xX_notícies_Xx</h1>
+        <h1 class="yellow-gradient">xX_notícies_Xx</h1>
     </header>
 
-    <main class="container" role="main">
-        <section class="news-section">
+    <main>
 
-            {% assign posts = site.posts | sort: "date" | reverse %}
+        {% assign posts = site.posts | sort: "date" | reverse %}
 
-            {% for post in posts %}
-            <div class="news-item">
-                <button class="news-title">
-                    {{ post.title }} - {{ post.date | date: "%d/%m/%Y" }}
-                </button>
+        {% for post in posts %}
+        <div class="news-item">
+            <h1 class="news-title">
+                {{ post.title }} - {{ post.date | date: "%d/%m/%Y" }}
+            </h1>
 
-                <div class="news-content">
-                    {{ post.content }}
-                </div>
+            <div class="news-content">
+                {{ post.content }}
             </div>
-            {% endfor %}
+        </div>
+        {% endfor %}
 
-        </section>
     </main>
 
-    <footer class="site-footer" aria-hidden="true">
-        <small>made in dosrius</small>
+    <footer>
+        <!-- made in dosrius -->
+        sense novetats, per ara...
     </footer>
 
     <script>

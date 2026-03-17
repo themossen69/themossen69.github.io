@@ -2,6 +2,8 @@
     --bg-yellow: #fcf434;
     /* --bg-yellow: #ffef41; */
     --light-yellow: #fff374;
+    --lighter-yellow: #fff9b1;
+
     --black: #000000;
     --purple: #9C59D1;
     --white: #ffffff;
@@ -36,10 +38,10 @@ header {
 h1 {
     display: inline-block;
     text-align: center;
-    /* background: linear-gradient(90deg, var(--light-yellow), var(--bg-yellow), var(--light-yellow)); */
     padding: 5pt 10pt 5pt 10pt;
     margin: 0;
     border-radius: 999px;
+    border: solid 2px var(--light-yellow);
     text-decoration: none;
     text-transform: none;
     cursor: context-menu;
@@ -63,10 +65,6 @@ h1:hover {
     transform: scale(1.2) rotate(1deg);
 }
 
-.btn:hover {
-    cursor: pointer;
-}
-
 .button-row {
     display: flex;
     /* background: white; */
@@ -83,6 +81,7 @@ h1:hover {
     box-shadow: 0 0 10px var(--black);
     border: solid 2px var(--light-yellow);
     z-index: 1;
+    background: var(--bg-yellow);
     animation: breathe 3s ease-in-out infinite;
 }
 
@@ -236,6 +235,7 @@ main {
     margin-right: auto;
     width: 90%;
     box-sizing: border-box;
+    /* background: black; */
 }
 
 .container {
@@ -263,5 +263,69 @@ footer {
 
     100% {
         transform: translateX(-100%);
+    }
+}
+
+.news-item {
+    will-change: transform;
+    transition: all 0.5s ease;
+    position: relative;
+    background: white;
+    border-radius: 20px;
+}
+
+.news-item.active {
+    z-index: 100;
+    transform: scale(1.05);
+}
+
+.news-title {
+    font: inherit;
+    display: block;
+    width: inherit;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 10px 15px 10px 15px;
+    background: linear-gradient(90deg, var(--lighter-yellow), var(--bg-yellow), var(--lighter-yellow));
+    background-size: 200% 200%;
+    border-radius: 20px;
+    border: solid 2px var(--light-yellow);
+    box-shadow: 0 0 10px var(--black);
+    animation: background-horizontal-slide 3s linear infinite;
+}
+
+.news-title:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 20px var(--black);
+    transform: scale(1.05);
+    animation: background-horizontal-slide 0.5s linear infinite;
+}
+
+.news-content {
+    max-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 20px;
+    padding: 0 15px 0 15px;
+    overflow: hidden;
+    /* background: var(--white); */
+    transition: max-height 0.35s ease, padding 0.35s ease;
+
+}
+
+.news-item.active .news-content {
+    max-height: none;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+@keyframes background-horizontal-slide {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 200% 50%;
     }
 }
