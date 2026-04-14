@@ -155,7 +155,7 @@ p {
     font-weight: 500;
 }
 
-.trippy-lesbian p {
+.trippy-lesbian {
     animation:
         floaty 6s ease-in-out infinite,
         lesbian-shadow-gradient 6s ease-in-out infinite;
