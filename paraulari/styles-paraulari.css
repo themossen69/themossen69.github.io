@@ -1,0 +1,41 @@
+.button-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.catalan-button:hover {
+    cursor: pointer;
+    animation: spin 1s;
+    box-shadow: 0 5px 20px var(--black);
+    color: var(--blau-catalunya);
+    text-shadow: 0 0 10px var(--white);
+    font-weight: bold;
+    transform: scale(1.2);
+    background:
+        /* linear-gradient(rgb(255 255 255 / 0.4), rgb(255 255 255 / 0.4)), */
+        linear-gradient(180deg,
+            var(--bg-yellow) 0%, var(--bg-yellow) 11.11%,
+            var(--vermell-catalunya) 11.11%, var(--vermell-catalunya) 22.22%,
+            var(--bg-yellow) 22.22%, var(--bg-yellow) 33.33%,
+            var(--vermell-catalunya) 33.33%, var(--vermell-catalunya) 44.44%,
+            var(--bg-yellow) 44.44%, var(--bg-yellow) 55.55%,
+            var(--vermell-catalunya) 55.55%, var(--vermell-catalunya) 66.66%,
+            var(--bg-yellow) 66.66%, var(--bg-yellow) 77.77%,
+            var(--vermell-catalunya) 77.77%, var(--vermell-catalunya) 88.88%,
+            var(--bg-yellow) 88.88%, var(--bg-yellow) 100%)
+}
+
+.catalan-bg {
+    background:
+        linear-gradient(90deg,
+            var(--bg-yellow) 0%, var(--bg-yellow) 11.11%,
+            var(--vermell-catalunya) 11.11%, var(--vermell-catalunya) 22.22%,
+            var(--bg-yellow) 22.22%, var(--bg-yellow) 33.33%,
+            var(--vermell-catalunya) 33.33%, var(--vermell-catalunya) 44.44%,
+            var(--bg-yellow) 44.44%, var(--bg-yellow) 55.55%,
+            var(--vermell-catalunya) 55.55%, var(--vermell-catalunya) 66.66%,
+            var(--bg-yellow) 66.66%, var(--bg-yellow) 77.77%,
+            var(--vermell-catalunya) 77.77%, var(--vermell-catalunya) 88.88%,
+            var(--bg-yellow) 88.88%, var(--bg-yellow) 100%)
+}
