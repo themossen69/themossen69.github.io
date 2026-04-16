@@ -1,6 +1,6 @@
 ---
 title: "Que pone en tu DNI?"
-date: 2026-02-28
+date: 2026-04-14
 ---
 
 Acompanya'm a aquesta **llarga** aventura plena d'incompetents per fer el simple tràmit de canvi de nom al DNI.
