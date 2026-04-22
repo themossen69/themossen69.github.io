@@ -1,32 +1,44 @@
 [
     {
+        "_id": 0,
         "word": "petador",
         "definition": "com un fuet",
         "date": "2026-03-16"
     },
     {
+        "_id": 1,
         "word": "estrep",
         "definition": "pegadolça (o regaliz pels castellans)",
         "date": "2026-03-16"
     },
     {
+        "_id": 2,
         "word": "patxuli",
         "definition": "perfum pels hippies",
         "date": "2026-03-16"
     },
     {
+        "_id": 3,
         "word": "desgavell",
         "definition": "desordre",
         "date": "2026-03-16"
     },
     {
+        "_id": 4,
         "word": "camàndoles",
         "definition": "una mica com la bel (cantamañanas pels castellans) però més suau",
         "date": "2026-03-16"
     },
     {
+        "_id": 5,
         "word": "xaix",
         "definition": "persona desmanegada o que bruteja",
         "date": "2026-03-16"
+    },
+    {
+        "_id": 6,
+        "word": "panteó",
+        "definition": "lloc on alabes a un conjunt de deus (com els grecs, per exemple)",
+        "date": "2026-04-22"
     }
 ]

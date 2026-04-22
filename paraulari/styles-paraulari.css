@@ -1,9 +1,3 @@
-.button-column {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
 .catalan-button:hover {
     cursor: pointer;
     animation: spin 1s;
@@ -12,6 +6,7 @@
     text-shadow: 0 0 10px var(--white);
     font-weight: bold;
     transform: scale(1.2);
+    z-index: 100;
     background:
         /* linear-gradient(rgb(255 255 255 / 0.4), rgb(255 255 255 / 0.4)), */
         linear-gradient(180deg,
@@ -38,4 +33,73 @@
             var(--bg-yellow) 66.66%, var(--bg-yellow) 77.77%,
             var(--vermell-catalunya) 77.77%, var(--vermell-catalunya) 88.88%,
             var(--bg-yellow) 88.88%, var(--bg-yellow) 100%)
+}
+
+.button-definition-column {
+    flex: 2.5;
+    display: flex;
+    padding: 10pt 20pt 10pt 20pt;
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.button-word-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10pt 20pt 10pt 20pt;
+    margin-top: 20px;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.game-button-row {
+    display: flex;
+    padding: 10pt 20pt 10pt 20pt;
+    margin: 20px auto;
+    max-width: 1200px;
+    width: 95%;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button.selected {
+    cursor: default;
+    box-shadow: 0 5px 20px var(--black);
+    color: var(--blau-catalunya);
+    text-shadow: 0 0 10px var(--white);
+    font-weight: bold;
+    transform: scale(1.2);
+    z-index: 100;
+    background:
+        /* linear-gradient(rgb(255 255 255 / 0.4), rgb(255 255 255 / 0.4)), */
+        linear-gradient(180deg,
+            var(--bg-yellow) 0%, var(--bg-yellow) 11.11%,
+            var(--vermell-catalunya) 11.11%, var(--vermell-catalunya) 22.22%,
+            var(--bg-yellow) 22.22%, var(--bg-yellow) 33.33%,
+            var(--vermell-catalunya) 33.33%, var(--vermell-catalunya) 44.44%,
+            var(--bg-yellow) 44.44%, var(--bg-yellow) 55.55%,
+            var(--vermell-catalunya) 55.55%, var(--vermell-catalunya) 66.66%,
+            var(--bg-yellow) 66.66%, var(--bg-yellow) 77.77%,
+            var(--vermell-catalunya) 77.77%, var(--vermell-catalunya) 88.88%,
+            var(--bg-yellow) 88.88%, var(--bg-yellow) 100%)
+}
+
+button.correct {
+    cursor: default;
+    background: var(--blau-catalunya);
+    color: white;
+}
+
+button.incorrect {
+    cursor: default;
+    background: var(--vermell-catalunya);
+    color: black;
 }
