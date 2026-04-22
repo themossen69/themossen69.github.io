@@ -33,7 +33,7 @@ function create_button(item, type) {
     button.innerText = item.text;
     button.dataset.id = item.id;
 
-    button.classList.add("catalan-button");
+    button.classList.add("game-button");
 
     button.onclick = () => {
         if (type === "word") {
