@@ -125,3 +125,23 @@ button.incorrect {
     background: var(--vermell-catalunya);
     color: black;
 }
+
+.dic-title {
+    display: center;
+    text-align: center;
+    animation: wave 5s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
+}
