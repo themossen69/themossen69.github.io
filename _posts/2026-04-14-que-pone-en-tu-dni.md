@@ -31,6 +31,6 @@ Si algú ha arribat fins aquí DAMN, espero que hagis après el nivell d'incompe
 
 Gràcies per llegir❤️
 
-Puta policia i putos funcionaris 🫡
+Puta policia i puta espanya 🫡
 
 ![alt text](/assets/images/nom-dni.png)
