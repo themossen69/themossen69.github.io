@@ -2,7 +2,7 @@
     {
         "_id": 0,
         "word": "petador",
-        "definition": "com un fuet",
+        "definition": "com un fuet a Sabadell",
         "date": "2026-03-16"
     },
     {
@@ -25,8 +25,8 @@
     },
     {
         "_id": 4,
-        "word": "camàndoles",
-        "definition": "una mica com la bel (cantamañanas pels castellans) però més suau",
+        "word": "camàndules",
+        "definition": "persona que sempre posa excuses per tot (cantamañanas pels castellans)",
         "date": "2026-03-16"
     },
     {
@@ -40,5 +40,17 @@
         "word": "panteó",
         "definition": "lloc on alabes a un conjunt de deus (com els grecs, per exemple)",
         "date": "2026-04-22"
+    },
+    {
+        "_id": 7,
+        "word": "golut",
+        "definition": "persona que li agrada menjar molt (golafre)",
+        "date": "2026-04-26"
+    },
+    {
+        "_id": 8,
+        "word": "bromera",
+        "definition": "cojunt de bombolles i porqueria que forma la escuma en un líquid",
+        "date": "2026-04-28"
     }
 ]
