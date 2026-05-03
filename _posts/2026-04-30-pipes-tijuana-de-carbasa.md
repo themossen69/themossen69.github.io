@@ -1,5 +1,5 @@
 ---
-title: "Recepta d'aprofitament: pipes de carbassa estil _tijuana_"
+title: "Recepta d'aprofitament: pipes de carbassa estil tijuana"
 date: 2026-04-30
 ---
 
