@@ -1,6 +1,6 @@
 let i = 0;
 let inicialized = false;
-let intro = "Fes clic a les fletxes del teclat per anar passant les paraules una a una i gaudeix de les seves definicions!";
+let intro = "Prem les fletxes per anar passant les paraules una a una i gaudeix de les seves definicions!";
 
 // load data
 fetch("../words.json")
