@@ -11,7 +11,7 @@ A Dosrius i diferents pobles de Catalunya se celebra la tradició del maig des d
 
 ![alt text](/assets/images/homes-amb-el-maig.jpeg)
 
-Potser no se'ns veu carregant l'arbre, però nosaltres (aina, vinyet i jo) vam fer la feina poc valorada de fer el forat. Ojo que vam cavar metre i eh! Vaig acabar amb els avantbraços ben tensos (però no ens queixarem, que és bon senyal pel pròxim buchipulso 😝). També vam participar en la penjada de banderes, representant amb l'estelada i, com no podia faltar, la bandera del barça un any més! Aviam si porta sort per la champions a Oslo 💙❤️.
+Potser no se'ns veu carregant l'arbre, però nosaltres (aina, vinyet i jo) vam fer la feina poc valorada de fer el forat. Ojo que vam cavar metre i mig eh! Vaig acabar amb els avantbraços ben tensos (però no ens queixarem, que és bon senyal pel pròxim buchipulso 😝). També vam participar en la penjada de banderes, representant amb l'estelada i, com no podia faltar, la bandera del barça un any més! Aviam si porta sort per la champions a Oslo 💙❤️.
 
 ![alt text](/assets/images/banderes-maig.jpeg)
 
