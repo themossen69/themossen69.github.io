@@ -1,0 +1,3 @@
+- fletxes del diccionari
+- fer que a la-parelleta només surtin 10 paraules (o algun límit) que ara n'hi ha moltes.
+- menu (tres linies que desplegui totes les parts de la pàgina siguis on siguis d'aquesta).

@@ -19,8 +19,8 @@ function game_init(data) {
     def.classList.add("trippy-lesbian");
 
     const container = document.getElementsByClassName("container")[0];
-    container.appendChild(word);
-    container.appendChild(def);
+    container.prepend(def);
+    container.prepend(word);
 
     document.addEventListener('keydown', function (event) {
         // Comprovem si la tecla premuda és la fletxa dreta

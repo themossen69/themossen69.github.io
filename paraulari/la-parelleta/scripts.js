@@ -33,6 +33,7 @@ function create_button(item, type) {
     button.innerText = item.text;
     button.dataset.id = item.id;
 
+    button.classList.add("yellow-button");
     button.classList.add("game-button");
 
     button.onclick = () => {

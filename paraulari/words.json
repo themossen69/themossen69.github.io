@@ -58,5 +58,17 @@
         "word": "badabadoc (o pipiripip)",
         "definition": "rosella",
         "date": "2026-04-28"
+    },
+    {
+        "_id": 10,
+        "word": "altruisme",
+        "definition": "buscar el bé de l'altre per sobre el propi",
+        "date": "2026-05-05"
+    },
+    {
+        "_id": 11,
+        "word": "falòrnia",
+        "definition": "una idea/història que és mentida però te la venen com a certa",
+        "date": "2026-05-09"
     }
 ]
