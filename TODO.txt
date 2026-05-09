@@ -1,3 +1,5 @@
 - fletxes del diccionari
+- missatge guanyador al joc de la-parelleta
+- intentar fer modul 3 als paràgrafs en canvi dels 3 primers (moviment del text)
 - fer que a la-parelleta només surtin 10 paraules (o algun límit) que ara n'hi ha moltes.
 - menu (tres linies que desplegui totes les parts de la pàgina siguis on siguis d'aquesta).
