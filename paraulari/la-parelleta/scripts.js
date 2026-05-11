@@ -8,6 +8,8 @@ fetch("../words.json")
 
 
 function game_init(data) {
+    // limitar a 10 paraules random
+    data = mix_array(data).slice(0, 10);
     const col_words = document.getElementsByClassName("button-word-column")[0];
     const col_defs = document.getElementsByClassName("button-definition-column")[0];
 
