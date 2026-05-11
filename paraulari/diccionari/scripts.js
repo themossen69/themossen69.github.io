@@ -22,21 +22,39 @@ function game_init(data) {
     container.prepend(def);
     container.prepend(word);
 
+    const btn_left = document.querySelector(".arrow-left");
+    const btn_right = document.querySelector(".arrow-right");
+
+    function next_word() {
+        if (!inicialized) {
+            inicialized = true;
+            i = -1;
+        }
+        i = (i + 1) % len_data;
+        update();
+    }
+
+    function prev_word() {
+        if (!inicialized) inicialized = true;
+        i = (i - 1 + len_data) % len_data;
+        update();
+    }
+
+    function update() {
+        word.innerText = `${i + 1}. ${words[i]}`;
+        def.innerText = defs[i];
+    }
+
     document.addEventListener('keydown', function (event) {
         // Comprovem si la tecla premuda és la fletxa dreta
         if (event.key === "ArrowRight") {
-            if (!inicialized) {
-                inicialized = true;
-                i = -1; // Perquè després s'incrementi a 0
-            }
-            i = (i + 1) % len_data;
+            next_word();
         } else if (event.key === "ArrowLeft") {
-            if (!inicialized) inicialized = true;
-            i = (i - 1 + len_data) % len_data;
+            prev_word();
         }
-        word.innerText = `${i + 1}. ${words[i]}`;
-        def.innerText = defs[i];
-
     });
 
+    // Clics a les fletxes
+    btn_right.addEventListener('click', next_word);
+    btn_left.addEventListener('click', prev_word);
 }
