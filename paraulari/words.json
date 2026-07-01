@@ -8,7 +8,7 @@
     {
         "_id": 1,
         "word": "estrep",
-        "definition": "pegadolça (o regaliz pels castellans)",
+        "definition": "pega dolça (o regaliz pels castellans)",
         "date": "2026-03-16"
     },
     {
@@ -50,7 +50,7 @@
     {
         "_id": 8,
         "word": "bromera",
-        "definition": "cojunt de bombolles i porqueria que forma la escuma en un líquid",
+        "definition": "conjunt de bombolles i porqueria en forma d'escuma en un líquid",
         "date": "2026-04-28"
     },
     {
@@ -68,7 +68,7 @@
     {
         "_id": 11,
         "word": "falòrnia",
-        "definition": "una idea/història que és mentida però te la venen com a certa",
+        "definition": "una idea/història que és mentida, però te la venen com a certa",
         "date": "2026-05-09"
     },
     {
@@ -80,7 +80,7 @@
     {
         "_id": 13,
         "word": "feréstec",
-        "definition": "ésser poc sociable 👀",
+        "definition": "ser poc sociable 👀",
         "date": "2026-05-11"
     }
 ]
