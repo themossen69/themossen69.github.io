@@ -11,6 +11,6 @@ Aprofitant que la Mª Teresa plantava els seus calçots com cada any, em vaig un
 
 Així que si algú de vosaltres te ganes de calçots al febrer que m'avisi!
 
-{% include carousel.html images="/assets/imgages/operacioC1.jpeg, /assets/imgages/operacioC2.jpeg, /assets/imgages/operacioC3.jpeg, /assets/imgages/operacioC4.jpeg" id="galeria-1" %}
+{% include carousel.html images="/assets/images/operacioC1.jpeg, /assets/images/operacioC2.jpeg, /assets/images/operacioC3.jpeg, /assets/images/operacioC4.jpeg" id="galeria-1" %}
 
 Ja faré update segons evolucioni, gràcies per llegir 🫡🥰
