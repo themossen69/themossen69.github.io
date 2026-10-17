@@ -94,5 +94,23 @@
         "word": "cofar",
         "definition": "cobrir el cap d'algú amb un barret, casc, etc.",
         "date": "2026-08-17"
+    },
+    {
+        "_id": 16,
+        "word": "gasiu",
+        "definition": "que no es gasta els diners, un rata",
+        "date": "2026-10-02"
+    },
+    {
+        "_id": 17,
+        "word": "aporia",
+        "definition": "dificultat per resoldre un problema",
+        "date": "2026-10-02"
+    },
+    {
+        "_id": 18,
+        "word": "canteula",
+        "definition": "que es queixa o li fa cosa qualsevol cosa (una faba)",
+        "date": "2026-10-05"
     }
 ]
