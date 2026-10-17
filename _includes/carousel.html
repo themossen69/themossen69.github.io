@@ -1,0 +1,87 @@
+{% assign images = include.images | split: "," %}
+{% assign carousel_id = include.id | default: "carousel-1" %}
+
+<div id="{{ carousel_id }}" class="jekyll-carousel">
+    <div class="carousel-inner">
+        {% for img in images %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <img src="{{ img | strip | relative_url }}" alt="Imatge {{ forloop.index }}">
+        </div>
+        {% endfor %}
+    </div>
+
+    <button class="carousel-btn prev" onclick="moveCarousel('{{ carousel_id }}', -1)">&#10094;</button>
+    <button class="carousel-btn next" onclick="moveCarousel('{{ carousel_id }}', 1)">&#10095;</button>
+</div>
+
+<style>
+    .jekyll-carousel {
+        position: relative;
+        max-width: 100%;
+        margin: 1.5rem 0;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .carousel-item {
+        display: none;
+        text-align: center;
+    }
+
+    .carousel-item.active {
+        display: block;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 20px;
+        border-radius: 4px;
+        user-select: none;
+        transition: background-color 0.2s ease;
+    }
+
+    .carousel-btn:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .carousel-btn.prev {
+        left: 10px;
+    }
+
+    .carousel-btn.next {
+        right: 10px;
+    }
+</style>
+
+<script>
+    if (typeof moveCarousel !== 'function') {
+        function moveCarousel(id, direction) {
+            const carousel = document.getElementById(id);
+            const items = carousel.querySelectorAll('.carousel-item');
+            let activeIndex = Array.from(items).findIndex(item => item.classList.contains('active'));
+
+            items[activeIndex].classList.remove('active');
+
+            let newIndex = activeIndex + direction;
+            if (newIndex >= items.length) newIndex = 0;
+            if (newIndex < 0) newIndex = items.length - 1;
+
+            items[newIndex].classList.add('active');
+        }
+    }
+</script>
