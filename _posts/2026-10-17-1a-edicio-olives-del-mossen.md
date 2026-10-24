@@ -38,6 +38,6 @@ Ara queda etiquetar, ja tinc algunes idees del disseny gràfic per questa primer
 
 Us deixo per aqui unes imatges 😘
 
-{% include carousel.html images="/assets/images/olives/1.PNG, /assets/images/olives/2.PNG, /assets/images/olives/3.PNG, /assets/images/olives/4.PNG, /assets/images/olives/5.PNG" id="galeria-2" %}
+{% include carousel.html images="/assets/images/olives/1.PNG, /assets/images/olives/2.PNG, /assets/images/olives/3.png, /assets/images/olives/4.PNG, /assets/images/olives/5.png" id="galeria-2" %}
 
 Gràcies per llegir, us actualitzo en uns mesos!🫒🫂
