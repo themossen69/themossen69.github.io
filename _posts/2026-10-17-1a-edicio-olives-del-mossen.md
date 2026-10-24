@@ -25,6 +25,8 @@ Anyways, el 17 d'octubre va ser el dia d'especiar la cosa i fer la salmorra. Vai
 
 Aquestes son les quantitats que van quedar:
 
+<div align="center" markdown="1">
+
 | ingredient | quantitat |
 |:----------:|:---------:|
 | olives | 2861g |
@@ -33,6 +35,7 @@ Aquestes son les quantitats que van quedar:
 | sajolida | 10 branques |
 | fulles llimoner | 6 |
 
+</div>
 
 Ara queda etiquetar, ja tinc algunes idees del disseny gràfic per questa primera edició. I a esperar! (tots els videos que veig diuen temps diferents, així que les aniré provant de tant en tant aviam que tal)
 
