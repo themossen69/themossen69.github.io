@@ -63,6 +63,17 @@
         let weeks = [];
         let chart = null;
 
+        function parseWeek(week) {
+            const parts = String(week).trim().split('/');
+            if (parts.length === 3) {
+                const day = Number(parts[0]);
+                const month = Number(parts[1]);
+                const year = Number(parts[2]);
+                return year * 10000 + month * 100 + day;
+            }
+            return 0;
+        }
+
         // Carrega i neteja les dades del CSV
         Papa.parse(CSV_URL, {
             download: true,
@@ -79,7 +90,8 @@
                 }));
 
                 // Extreu les setmanes úniques ordenades cronològicament
-                weeks = [...new Set(allRows.map(r => r.setmana))].sort();
+                weeks = [...new Set(allRows.map(r => r.setmana))]
+                    .sort((a, b) => parseWeek(a) - parseWeek(b));
 
                 const select = document.getElementById('weekSelect');
                 weeks.forEach(w => {
@@ -100,8 +112,9 @@
 
             // Filtra fins a la setmana triada i suma per jugadora
             const totals = {};
+            const selectedWeekKey = parseWeek(selectedWeek);
             allRows
-                .filter(r => r.setmana <= selectedWeek)
+                .filter(r => parseWeek(r.setmana) <= selectedWeekKey)
                 .forEach(r => {
                     totals[r.nom] = (totals[r.nom] || 0) + r.import;
                 });
