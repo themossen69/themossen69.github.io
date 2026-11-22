@@ -34,6 +34,11 @@
             position: relative;
             height: 650px;
         }
+
+        .total-box {
+            margin: 0 0 1.5rem;
+            font-size: 1.25rem;
+        }
     </style>
 </head>
 
@@ -47,6 +52,8 @@
         <select id="weekSelect"></select>
         <button id="nextBtn">Següent ▶</button>
     </div>
+
+    <p class="total-box"><strong>Total acumulat: <span id="totalAmount">0 €</span></strong></p>
 
     <div class="chart-box">
         <canvas id="finesChart"></canvas>
@@ -123,6 +130,14 @@
             const sorted = Object.entries(totals).sort((a, b) => b[1] - a[1]);
             const labels = sorted.map(item => item[0]);
             const values = sorted.map(item => item[1]);
+            const total = values.reduce((sum, value) => sum + value, 0);
+            document.getElementById('totalAmount').textContent =
+                new Intl.NumberFormat('ca-ES', {
+                    style: 'currency',
+                    currency: 'EUR',
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                }).format(total);
 
             if (chart) {
                 chart.data.labels = labels;
