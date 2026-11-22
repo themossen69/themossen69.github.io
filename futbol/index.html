@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rànquing de Multes</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        select,
+        button {
+            padding: 0.5rem 0.8rem;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .chart-box {
+            position: relative;
+            height: 650px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Import total pagat per jugadora (acumulat)</h2>
+
+    <div class="controls">
+        <button id="prevBtn">◀ Anterior</button>
+        <label for="weekSelect"><strong>Fins a la setmana:</strong></label>
+        <select id="weekSelect"></select>
+        <button id="nextBtn">Següent ▶</button>
+    </div>
+
+    <div class="chart-box">
+        <canvas id="finesChart"></canvas>
+    </div>
+
+    <script src="./config.js"></script>
+    <script>
+        const CSV_URL = window.CSV_URL;
+
+        let allRows = [];
+        let weeks = [];
+        let chart = null;
+
+        // Carrega i neteja les dades del CSV
+        Papa.parse(CSV_URL, {
+            download: true,
+            header: true,
+            complete: function (results) {
+                allRows = results.data.filter(r =>
+                    r.setmana && r.setmana.trim() !== '' &&
+                    r.nom && r.nom.trim() !== '' &&
+                    String(r.pagat).toUpperCase() === 'TRUE'
+                ).map(r => ({
+                    setmana: r.setmana.trim(),
+                    nom: r.nom.trim(),
+                    import: parseFloat(String(r['import total']).replace(',', '.')) || 0
+                }));
+
+                // Extreu les setmanes úniques ordenades cronològicament
+                weeks = [...new Set(allRows.map(r => r.setmana))].sort();
+
+                const select = document.getElementById('weekSelect');
+                weeks.forEach(w => {
+                    const opt = document.createElement('option');
+                    opt.value = w;
+                    opt.textContent = w;
+                    select.appendChild(opt);
+                });
+
+                // Selecciona l'última setmana per defecte
+                select.value = weeks[weeks.length - 1];
+                updateChart();
+            }
+        });
+
+        function updateChart() {
+            const selectedWeek = document.getElementById('weekSelect').value;
+
+            // Filtra fins a la setmana triada i suma per jugadora
+            const totals = {};
+            allRows
+                .filter(r => r.setmana <= selectedWeek)
+                .forEach(r => {
+                    totals[r.nom] = (totals[r.nom] || 0) + r.import;
+                });
+
+            // Ordena de més import a menys
+            const sorted = Object.entries(totals).sort((a, b) => b[1] - a[1]);
+            const labels = sorted.map(item => item[0]);
+            const values = sorted.map(item => item[1]);
+
+            if (chart) {
+                chart.data.labels = labels;
+                chart.data.datasets[0].data = values;
+                chart.update();
+            } else {
+                const ctx = document.getElementById('finesChart').getContext('2d');
+                chart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Import pagat (€)',
+                            data: values,
+                            backgroundColor: '#2563eb',
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y', // Converteix les columnes en files horitzontals
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: { beginAtZero: true, title: { display: true, text: 'Euros (€)' } }
+                        },
+                        plugins: {
+                            legend: { display: false }
+                        }
+                    }
+                });
+            }
+        }
+
+        // Esdeveniments per canviar de setmana
+        const select = document.getElementById('weekSelect');
+        select.addEventListener('change', updateChart);
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (select.selectedIndex > 0) {
+                select.selectedIndex--;
+                updateChart();
+            }
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (select.selectedIndex < weeks.length - 1) {
+                select.selectedIndex++;
+                updateChart();
+            }
+        });
+    </script>
+</body>
+
+</html>
