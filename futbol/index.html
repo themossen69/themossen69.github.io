@@ -55,6 +55,9 @@
     <script src="./config.js"></script>
     <script>
         const CSV_URL = window.CSV_URL;
+        if (!CSV_URL) {
+            throw new Error('CSV_URL no està configurada.');
+        }
 
         let allRows = [];
         let weeks = [];
