@@ -7,6 +7,8 @@
     <title>Rànquing de Multes</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
     <style>
         body {
             font-family: system-ui, sans-serif;
@@ -20,15 +22,16 @@
             gap: 1rem;
             align-items: center;
             margin-bottom: 1.5rem;
+            margin-top: 1.5rem;
         }
 
-        select,
+        /* select,
         button {
             padding: 0.5rem 0.8rem;
             font-size: 1rem;
             border-radius: 6px;
             border: 1px solid #ccc;
-        }
+        } */
 
         .chart-box {
             position: relative;
@@ -43,14 +46,19 @@
 </head>
 
 <body>
+    <header class="site-header">
+        <h1 class="yellow-gradient">xX_futbol_Xx</h1>
+    </header>
 
-    <h2>Import total pagat per jugadora (acumulat)</h2>
+    <section class="container">
+        <p class="trippy-lesbian">Rànquings primer equip femení premià de dalt temporada 2026/27</p>
+    </section>
 
-    <div class="controls">
-        <button id="prevBtn">◀ Anterior</button>
-        <label for="weekSelect"><strong>Fins a la setmana:</strong></label>
+    <div class="controls button-row">
+        <button id="prevBtn" class="yellow-button lesbian-button">◀ Anterior</button>
+        <label for="weekSelect" class="trippy-lesbian"><strong>Fins a la setmana:</strong></label>
         <select id="weekSelect"></select>
-        <button id="nextBtn">Següent ▶</button>
+        <button id="nextBtn" class="yellow-button lesbian-button">Següent ▶</button>
     </div>
 
     <p class="total-box"><strong>Total acumulat: <span id="totalAmount">0 €</span></strong></p>
